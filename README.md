@@ -1,12 +1,10 @@
-
- 
 # Reinforcement-guided generative protein language models enable de novo design of highly diverse AAV capsids
 
 This repository contains the code accompanying the arXiv submission of the paper:
 
 **“Reinforcement-guided generative protein language models enable de novo design of highly diverse AAV capsids”**
 
-It includes two sets of scripts, each with its own software environment.
+It includes two sets of scripts, each with one or more software environments.
 
 ---
 
@@ -21,7 +19,7 @@ This set contains the main scripts used for data processing, analysis, and visua
 - `03_plottingNovelty.py` – Analyzes a set of randomly chosen sequences and generates the plots presented in the paper  
 - `04_biophysicalAnalysis.py` – Implements polarity and charge filter analysis and the grid-based selection strategy  
 
-**Environment for Set 1:** `requirements1.yml`
+**Environment for Set 1:** `environment1.yml` 
 
 ---
 
@@ -29,11 +27,10 @@ This set contains the main scripts used for data processing, analysis, and visua
 
 This set contains scripts used for model training and sequence generation:
 
-- `05_xxx.py` – Description to be added  
-- `06_xxx.py` – Description to be added  
-- `07_xxx.py` – Description to be added  
+- `05_supervisedFineTuning.py` – Supervised fine-tuning of ProGen2-small on viable AAV sequences, with masked loss on the generated middle region  
+- `06_rlTraining_viabilityDiversity.py` – Reinforcement learning with viability and reference-diversity rewards (KL-regularized policy updates)  
 
-**Environment for Set 2:** `requirements2.yml`
+**Environments for Set 2:** `requirements2.yml` and `requirements3.yml`
 
 ---
 
@@ -63,4 +60,4 @@ This work was supported by FCT – Fundação para a Ciência e Tecnologia, I.P.
 
 It was also partially supported by the CancerScan project, which received funding from the European Union’s Horizon Europe Research and Innovation Action (EIC Pathfinder Open) under grant agreement No. 101186829.
 
-Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or the European Innovation Council and SMEs Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.# genAAV
+Views and opinions expressed are those of the author(s) only and do not necessarily reflect those of the European Union or the European Innovation Council and SMEs Executive Agency. Neither the European Union nor the granting authority can be held responsible for them.
